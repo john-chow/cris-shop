@@ -1,9 +1,11 @@
-const express = require('express');
-const fs = require('fs');
-const join = require('path').join;
+import Express from 'express'
+import fs from 'fs'
+import path from 'path'
+
+const join = path.join
 const models = join(__dirname, 'app/models');
 
-const app = express();
+const app = Express();
 const port = process.env.PORT || 8080;
 app.set("port", port);
 

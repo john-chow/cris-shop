@@ -1,6 +1,6 @@
 'use strict';
 
-const goods = require('../app/controllers/goods');
+import * as goods from '../app/controllers/goods'
 
 module.exports = (app) => {
 	app.get('/goods', goods.list);
@@ -10,6 +10,7 @@ module.exports = (app) => {
 	app.get('/goods/new', goods.create);
 	app.post('/goods/new', goods.new);
 	app.delete('/goods/:id', goods.delete);
+	app.get('/', goods.index);
 
 	//app.get('/admin', admin.index);
 }

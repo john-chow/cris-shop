@@ -1,6 +1,6 @@
 'use strict';
 
-const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 
 const GoodsSchema = new mongoose.Schema({
 	name: 	{type: String, trim: true, required: true},
@@ -20,7 +20,8 @@ GoodsSchema.methods = {
 GoodsSchema.statics = {
 	list:    function()	{
 		let models = [{
-			name: "value",
+			id: 		1,
+			name: 		"商品1",
 			price:  	12,
 			avatar: 	'/static/image/a.png',
 			image: 		['/static/image/b.png'],

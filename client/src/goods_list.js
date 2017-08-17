@@ -17,7 +17,7 @@ class Goodslist extends React.Component {
     }
 
 	render() {
-        const items = this.state.data.map((one) => 
+        const items = this.state.data.map(one => 
             <GoodsItem key={one.id} model={one} />
         )
         return (

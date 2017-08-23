@@ -1,10 +1,12 @@
 import { renderToString } from 'react-dom/server'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import shopApp from './../../client/src/reducers'
+import App from './../../client/src/app'
 
 export default function handleRender(req, res) {
   // Create a new Redux store instance
-  const store = createStore(counterApp)
+  const store = createStore(shopApp)
 
   // Render the component to a string
   const html = renderToString(

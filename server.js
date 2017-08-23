@@ -1,6 +1,7 @@
 import Express from 'express'
 import fs from 'fs'
 import path from 'path'
+import handleRender from './app/middleware/handle_render'
 
 const join = path.join
 const models = join(__dirname, 'app/models');
@@ -16,6 +17,7 @@ fs.readdirSync(models)
 
 require('./config/routes')(app);
 
+app.use(handleRender);
 app.listen(port, () => {
 	console.log('Express app started on port ' + port);
 });

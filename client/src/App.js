@@ -1,6 +1,6 @@
 import React from 'react';
-import Goodslist from './goods_list';
-import Categorylist from './category_list';
+import Goodslist from './components/goods_list';
+import Categorylist from './components/category_list';
 
 class App extends React.Component {
   constructor(props) {

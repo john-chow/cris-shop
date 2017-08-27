@@ -8,9 +8,11 @@ class CategoryList extends React.Component {
 
     render()　{
         return (
-            <ButtonGroup vertical>
-                <Button>Button</Button>
-            </ButtonGroup>
+            this.props.cates.map(c => (
+                <ButtonGroup vertical>
+                    <Button>Button</Button>
+                </ButtonGroup>
+            ))
         )
     }
 }
